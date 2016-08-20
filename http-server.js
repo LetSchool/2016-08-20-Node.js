@@ -5,6 +5,6 @@ var server = http.createServer(function(req, res) {
   res.end('Hello world!');
 });
 
-server.listen(80, function() {
+server.listen(3000, function() {
   console.log('Ready');
 });
