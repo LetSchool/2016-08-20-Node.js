@@ -13,7 +13,7 @@ app.use(views(__dirname + '/views', {
 }));
 
 router.get('/', function *() {
-  yield this.render('index');
+  yield this.render('index', { msg: 'Yeah!' });
 });
 
 app.use(router.middleware());
