@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Poll</title>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script>
+      function poll() {
+
+        $.ajax({
+          url: '/poll',
+          type: 'get',
+          timeout: 120000,
+          complete: poll,
+          success: function(data) {
+            console.log(data);
+          }
+        });
+      }
+
+      poll();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
