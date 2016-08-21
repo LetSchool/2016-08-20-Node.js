@@ -1,22 +1,28 @@
 <html>
   <head>
-    <title>Poll</title>
+    <title>WebSocket</title>
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script>
-      function poll() {
+      var wsUrl = 'ws://blistering-fireball-207116.nitrousapp.com';
 
-        $.ajax({
-          url: '/poll',
-          type: 'get',
-          timeout: 120000,
-          complete: poll,
-          success: function(data) {
-            console.log(data);
-          }
-        });
-      }
+      var websocket = new WebSocket(wsUrl);
 
-      poll();
+      websocket.onopen = function(evt) {
+        console.log('Connected');
+      };
+
+      websocket.onclose = function(evt) {
+        console.log('DisConnected');
+      };
+
+      websocket.onmessage = function(evt) {
+        console.log('Got Message');
+        console.log(evt);
+      };
+
+      websocket.onerror = function(evt) {
+        console.log('Something\'s wrong');
+      };
     </script>
   </head>
   <body>
