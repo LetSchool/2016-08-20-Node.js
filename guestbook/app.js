@@ -23,6 +23,21 @@ router.get('/', function *() {
   yield this.render('index', { msgs: msgs });
 });
 
+router.get('/leavemsg', function *() {
+  yield this.render('leavemsg');
+});
+
+router.post('/post', function *() {
+  var msg = {
+    name: this.request.body.name,
+    msg: this.request.body.msg
+  };
+
+  msgs.push(msg);
+
+  this.redirect('/');
+});
+
 app.use(bodyParser());
 app.use(serve('./public'));
 app.use(router.middleware());

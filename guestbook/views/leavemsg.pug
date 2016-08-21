@@ -1,0 +1,17 @@
+html
+  head
+    title Guestbook
+    link(rel='stylesheet', type='text/css', href='/css/default.css')
+  body
+    h1 Guestbook
+
+    a(href='/') HOME
+
+    form(action='/post', method='post')
+      div NAME
+      input(type='text', name='name')
+      div MESSAGE
+      textarea(rows='20', cols='80', name='msg')
+      div
+        input(type='submit')
+

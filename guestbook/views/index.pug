@@ -1,8 +1,11 @@
 html
   head
     title Guestbook
+    link(rel='stylesheet', type='text/css', href='/css/default.css')
   body
     h1 Guestbook
+
+    a(href='/leavemsg') Leave Message
 
     - for (var index in msgs)
       hr
