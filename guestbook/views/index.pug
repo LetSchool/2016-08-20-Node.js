@@ -8,8 +8,6 @@ html
     a(href='/leavemsg') Leave Message
 
     - for (var index in msgs)
-      hr
-      div
-        div
-          b #{msgs[index].name}
-        div #{msgs[index].msg}
+      div.block
+        div.name #{msgs[index].name}
+        div.msg #{msgs[index].msg}

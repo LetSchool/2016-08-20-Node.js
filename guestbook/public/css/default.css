@@ -1,3 +1,34 @@
 body {
   margin: 10px;
 }
+
+a {
+  padding: 5px;
+  border-radius: 10px;
+  background: #dddddd;
+  color: black;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.block {
+  color: #111111;
+  margin: 5px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 7px rgba(0,0,0,.2);
+}
+
+.name {
+  padding: 10px;
+  border-radius: 10px 0px 0px 0px;
+  font-weight: bold;
+  background: #2288cc;
+  color: white;
+}
+
+.msg {
+  padding: 10px;
+  background: white;
+  border-radius: 0px 0px 10px 0px;
+}
